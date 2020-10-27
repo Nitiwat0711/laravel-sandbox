@@ -14,18 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::name('api.')->middleware(['auth:api'])->group(function () {
-    Route::get('posts/search/{title}', [\App\Http\Controllers\API\PostsController::class, 'search']);
-    Route::apiResource('posts', \App\Http\Controllers\API\PostsController::class);
-});
-
-//Route::get('/posts', function (){
-//    return \App\Models\Post::all();
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
 //});
+//
+//Route::name('api.')->middleware(['auth:api'])->group(function () {
+//    Route::get('posts/search/{title}', [\App\Http\Controllers\API\PostsController::class, 'search']);
+//    Route::apiResource('posts', \App\Http\Controllers\API\PostsController::class);
+//});
+
+//Route::name('api')->group(function (){
+//
+//});
+
+Route::get('/name', function (){
+    $name = "Nitiwat Apaikawee";
+    $id = "6110400823";
+    return [
+        'name' => $name,
+        'id' => $id
+    ];
+});
 //
 //Route::post('/posts', function (Request $request)
 //{
