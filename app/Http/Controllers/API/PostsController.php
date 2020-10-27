@@ -17,8 +17,8 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        $user_id = $request->user()->id;
-        $posts = Post::where('user_id', $user_id)->orderBy('created_at', 'DESC') -> get();
+
+        $posts = Post::where('user_id', $request->user()->id)->orderBy('created_at', 'DESC') -> get();
         return new PostCollection($posts);
     }
 

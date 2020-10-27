@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
-//
-//Route::name('api.')->middleware(['auth:api'])->group(function () {
-//    Route::get('posts/search/{title}', [\App\Http\Controllers\API\PostsController::class, 'search']);
-//    Route::apiResource('posts', \App\Http\Controllers\API\PostsController::class);
-//});
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::name('api.')->middleware(['auth:api'])->group(function () {
+    Route::get('posts/search/{title}', [\App\Http\Controllers\API\PostsController::class, 'search']);
+    Route::apiResource('posts', \App\Http\Controllers\API\PostsController::class);
+});
 
 //Route::name('api')->group(function (){
 //
