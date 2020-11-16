@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>รายการโพสต์ทั้งหมด</h1>
+    <h1>Search Result</h1>
     @if (Auth::check())
         <p>Hello {{ Auth::user()->name }}</p>
     @endif
@@ -19,7 +19,8 @@
         <div class="col-6">
             <div class="d-inline  ml-3">
                 <form action="{{ route('posts.search') }}" method="GET">
-                    <input class="form-control" id="search_text" type="text" placeholder="Search" name="title" aria-label="Search">
+                    @csrf
+                    <input class="form-control" type="text" placeholder="Search" name="title" aria-label="Search">
                     <div class="mt-1" style="text-align: right">
                         <button type="submit" class="btn btn-dark">ค้นหา</button>
                     </div>
@@ -30,9 +31,7 @@
         </div>
     </div>
 
-    @if($posts instanceof \Illuminate\Pagination\LengthAwarePaginator)
-        {{ $posts->links() }}
-    @endif
+    {{ $posts->links() }}
     @foreach($posts as $post)
     <div class="card mb-3" style="width: 36rem;">
 
@@ -48,17 +47,6 @@
         </div>
     </div>
     @endforeach
-
-    <script>
-        function search_data(search_value) {
-            $.ajax({
-                url: '/search/' + search_value,
-                method: 'POST'
-            }).done(function(response){
-                $('#results').html(response); // put the returning html in the 'results' div
-            });
-        }
-    </script>
 
 
 @endsection

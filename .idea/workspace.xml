@@ -3,11 +3,36 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="97595a33-1c16-4cde-89ee-65c1d345e915" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/search-results.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sandboxx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sandboxx.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +177,8 @@
       <path value="$PROJECT_DIR$/vendor/league/event" />
       <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hYfuZiO6wiZw4rkLO3csczcCwG" />
@@ -164,9 +191,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/posts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sandboxx\resources\views\posts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -196,25 +228,39 @@
       <workItem from="1602256557071" duration="856000" />
       <workItem from="1603156735149" duration="9146000" />
       <workItem from="1603729396860" duration="1927000" />
-      <workItem from="1603759073652" duration="6627000" />
+      <workItem from="1603759073652" duration="8193000" />
+      <workItem from="1603785640391" duration="276000" />
+      <workItem from="1604309400846" duration="16002000" />
+      <workItem from="1605504068757" duration="17179000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="702" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600197353047">
+    <state x="702" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604312075751">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="702" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600197353047" />
+    <state x="702" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1604312075751" />
     <state x="1052" y="294" width="335" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1600197995783">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="1052" y="294" width="335" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.834@0.0.1536.834" timestamp="1600197995783" />
-    <state x="818" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1603730643360">
+    <state x="818" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1604342013382">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="818" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1603730643360" />
+    <state x="818" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1604342013382" />
   </component>
 </project>

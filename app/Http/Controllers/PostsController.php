@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PostCollection;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
 class PostsController extends Controller
@@ -69,6 +71,20 @@ class PostsController extends Controller
         ]);
 
     }
+
+    public function search(Request $request){
+        $search_text = $request->input('title');
+
+        $posts = Post::where('title','LIKE', '%'.$search_text.'%')->paginate(10);
+        $posts->appends(['search' => $search_text]);
+        return view('posts.index')->with('posts', $posts);
+    }
+
+//    public function search(Request $request, $title){
+//        $posts = Post::where('user_id', $request->user()->id)->where('title','LIKE', '%'.$title.'%')
+//            ->orderBy('created_at', 'DESC')->get();
+//        return new PostCollection($posts);
+//    }
 
     /**
      * Show the form for editing the specified resource.

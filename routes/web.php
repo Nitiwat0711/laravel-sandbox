@@ -24,6 +24,12 @@ Route::get('/pages', [PagesController::class, 'index'])
 Route::get('pages/{id}', [PagesController::class, 'show'])
     ->name('pages.show');
 
+Route::get('/search{title?}', [PostsController::class, 'search'])
+    ->name('posts.search');
+
+Route::get('/search', [PostsController::class, 'search'])
+    ->name('posts.search');
+
 Route::resource('/posts', PostsController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
